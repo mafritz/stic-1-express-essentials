@@ -1,0 +1,10 @@
+body {
+    background-color: lemonchiffon;
+    color: darkslategrey;
+}
+
+.image-frame {
+    background-color: white;
+    border: 1px solid darkslategrey;
+    text-align: center;
+}

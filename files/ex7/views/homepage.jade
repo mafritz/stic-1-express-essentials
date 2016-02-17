@@ -1,0 +1,10 @@
+doctype html
+html(lang=en)
+  head
+    title My Blog
+  body
+    h1 My Blog
+    ul
+        each post in posts
+            li
+                a(href="/detail/#{post.id}") #{post.title}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page using a template</title>
+</head>
+<body>
+    <!-- EJS uses a template language that integrates JavaScript into the template code -->
+
+    <!-- We use the template language to print the content of the cours variable, which is passed from the route --> 
+    <h1>My grades in <%= cours %></h1>
+    <ul>
+    <!-- We use the template language to built a for loop to print each element of the notes array passed from the route --> 
+    <% for(var i=0; i<notes.length; i++) {%>
+       <li>Exercice <%= notes[i].ex %>: <%= notes[i].grade %></li>
+    <% } %>
+    </ul>
+
+    <h2>Add a new note</h2>
+    <form action="/add" method="post">
+        <label>Exercice:</label> <input type="number" name="ex">
+        <label>Grade:</label> <input type="number" min="0" max="6" step="0.25" name="grade">
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
